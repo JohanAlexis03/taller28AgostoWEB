@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Sencilla</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .calculadora {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #calcular {
+      background: #4CAF50;
+      color: white;
+      flex: 2;
+    }
+
+    #limpiar {
+      background: #f44336;
+      color: white;
+      flex: 1;
+    }
+
+    .resultado {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      border-left: 4px solid #4CAF50;
+    }
+
+    #resultado-valor {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .error {
+      color: #f44336;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculadora">
+    <h2>🧮 Calculadora Sencilla</h2>
+    
+    <div class="input-group">
+      <input type="number" id="num1" placeholder="Primer número">
+      <select id="operacion">
+        <option value="+">Suma (+)</option>
+        <option value="-">Resta (-)</option>
+        <option value="*">Multiplicación (×)</option>
+        <option value="/">División (÷)</option>
+      </select>
+      <input type="number" id="num2" placeholder="Segundo número">
+    </div>
+
+    <div class="button-group">
+      <button id="calcular">Calcular</button>
+      <button id="limpiar">Limpiar</button>
+    </div>
+
+    <div class="resultado">
+      <div>Resultado:</div>
+      <div id="resultado-valor">-</div>
+    </div>
+
+    <div id="error-mensaje" class="error"></div>
+  </div>
+
+  <script src="calculadora-simple.js"></script>
+</body>
+</html>
